@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+*.log
+haters/
+*-START.*
+*-FINISHED.*
+*-start.*
+*-finished.*

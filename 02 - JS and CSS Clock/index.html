@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS + CSS Clock</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+	<div class="clock">
+		<div class="clock-face">
+			<div class="hand hour-hand"></div>
+			<div class="hand min-hand"></div>
+			<div class="hand second-hand"></div>
+			<div class="clock-center"></div>
+		</div>
+	</div>
+
+	<script>
+
+		const seconds_hand = document.querySelector('div.second-hand');
+		const minutes_hand = document.querySelector('div.min-hand');
+		const hours_hand = document.querySelector('div.hour-hand');
+
+		
+
+		function setHand(h,a,t) {
+			if(a == 0 && h.style.transition != 'none') {
+				h.style.transform = `translateY(${t}) rotate(360deg)`;
+				h.style.transition = 'none';
+				window.setTimeout(setHand(h,0,t),500);
+			}
+			else {
+				h.style.transform = `translateY(${t}) rotate(${a}deg)`;
+				if(a > 0 && h.style.transition == 'none') 
+					h.style.transition = 'transform 0.1s cubic-bezier(0.1, 2.7, 0.58, 1)'; // window.setTimeout(() => h.style.transition = 'transform 0.1s cubic-bezier(0.1, 2.7, 0.58, 1)', 250);
+			}
+		}
+
+
+		function setHands() {
+
+			const time = new Date();
+			const seconds = time.getSeconds();
+			const minutes = time.getMinutes();
+			var hours = time.getHours();
+			if(hours >= 12)
+				hours = hours-12;
+
+
+			[
+			{hand:seconds_hand,angle:seconds*6,translate:'-0.5px'},
+			{hand:minutes_hand,angle:minutes*6,translate:'-1.5px'},
+			{hand:hours_hand,angle:hours*30,translate:'-3px'}
+			].map(i=>setHand(i.hand,i.angle,i.translate));
+		}
+
+
+		window.setInterval(setHands,1000);
+
+
+	</script>
+
+</body>
+</html>

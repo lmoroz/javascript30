@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01 JS Drum kit</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="keys">
+		<div data-key="65" data-sound="clap" class="key">
+			<kbd>A</kbd>
+		</div>
+		<div data-key="83" data-sound="hihat" class="key">
+			<kbd>S</kbd>
+		</div>
+		<div data-key="68" data-sound="kick" class="key">
+			<kbd>D</kbd>
+		</div>
+		<div data-key="70" data-sound="openhat" class="key">
+			<kbd>F</kbd>
+		</div>
+		<div data-key="71" data-sound="boom" class="key">
+			<kbd>G</kbd>
+		</div>
+		<div data-key="72" data-sound="ride" class="key">
+			<kbd>H</kbd>
+		</div>
+		<div data-key="74" data-sound="snare" class="key">
+			<kbd>J</kbd>
+		</div>
+		<div data-key="75" data-sound="tom" class="key">
+			<kbd>K</kbd>
+		</div>
+		<div data-key="76" data-sound="tink" class="key">
+			<kbd>L</kbd>
+		</div>
+	</div>
+
+	<script>
+		Array.from(document.querySelectorAll('div.key')).forEach((el) => {
+			const audioEl = document.createElement('audio');
+			audioEl.dataset.key = el.dataset.key;
+			audioEl.setAttribute('src','sounds/'+el.dataset.sound+'.wav');
+			document.body.appendChild(audioEl);
+			const soundEl = document.createElement('span');
+			soundEl.setAttribute('class','sound');
+			soundEl.innerHTML = el.dataset.sound;
+			el.appendChild(soundEl);
+		});
+
+		window.addEventListener('keydown',(event)=> {
+			const myDiv = document.querySelector(`div.key[data-key="${event.keyCode}"]`);
+			const myAudio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+			if(myDiv && myAudio) {
+				console.log('keydown',event.keyCode);
+				myDiv.classList.add('playing');
+				myAudio.currentTime = 0;
+				myAudio.play();
+			}
+		});
+
+		Array.from(document.querySelectorAll('div.key')).forEach((el) => {
+			el.addEventListener('transitionend',(event)=> {
+				const myDiv = event.target;
+				if(event.propertyName !== 'transform') return;
+				myDiv.classList.remove('playing');
+			});
+		});
+
+		/*
+		document.addEventListener('keyup',(event)=> {
+			const myDiv = document.querySelector(`div.key[data-key="${event.keyCode}"]`);
+			const myAudio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+			if(myDiv && myAudio) {
+				console.log('keyup',event.keyCode);
+				myAudio.pause();
+				myDiv.classList.remove('playing');
+			}
+		});
+		*/
+	</script>
+</body>
+</html>
