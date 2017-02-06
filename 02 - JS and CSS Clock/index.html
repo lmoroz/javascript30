@@ -27,12 +27,12 @@
 
 		function setHand(h,a,t) {
 			if(a == 0 && h.style.transition != 'none') {
-				h.style.transform = `translateY(${t}) rotate(360deg)`;
+				h.style.transform = `${t} rotate(360deg)`;
 				h.style.transition = 'none';
 				window.setTimeout(setHand(h,0,t),500);
 			}
 			else {
-				h.style.transform = `translateY(${t}) rotate(${a}deg)`;
+				h.style.transform = `${t} rotate(${a}deg)`;
 				if(a > 0 && h.style.transition == 'none') 
 					h.style.transition = 'transform 0.1s cubic-bezier(0.1, 2.7, 0.58, 1)'; // window.setTimeout(() => h.style.transition = 'transform 0.1s cubic-bezier(0.1, 2.7, 0.58, 1)', 250);
 			}
@@ -50,9 +50,9 @@
 
 
 			[
-			{hand:seconds_hand,angle:seconds*6,translate:'-0.5px'},
-			{hand:minutes_hand,angle:minutes*6,translate:'-1.5px'},
-			{hand:hours_hand,angle:hours*30,translate:'-3px'}
+			{hand:seconds_hand,angle:seconds*6,translate:'translateY(-0.5px)'},
+			{hand:minutes_hand,angle:minutes*6,translate:'translateY(-1.5px)'},
+			{hand:hours_hand,angle:hours*30,translate:'translate(4rem, -3px)'}
 			].map(i=>setHand(i.hand,i.angle,i.translate));
 		}
 

@@ -67,7 +67,8 @@ body {
   background:black;
   border-left: solid 1rem red;
   height: 6px;
-  transform: translateY(-3px); /* account for the height of the clock hands */
+  transform: translate(4rem, -3px); /* account for the height of the clock hands */
+  width: 12rem;
 }
 
 .min-hand {
