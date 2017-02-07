@@ -7,21 +7,8 @@
 <body>
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
 
+  <h3>Boulevars list from <a href="https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris" target="_blank">Wikipedia</a></h3>
   <div class="mw-category">
-    <div class="mw-category-group"><h3>&nbsp;</h3>
-        <ul><li><a href="/wiki/Boulevards_of_Paris" title="Boulevards of Paris">Boulevards of Paris</a></li>
-            <li><a href="/wiki/City_walls_of_Paris" title="City walls of Paris">City walls of Paris</a></li>
-            <li><a href="/wiki/Thiers_wall" title="Thiers wall">Thiers wall</a></li>
-            <li><a href="/wiki/Wall_of_Charles_V" title="Wall of Charles V">Wall of Charles V</a></li>
-            <li><a href="/wiki/Wall_of_Philip_II_Augustus" title="Wall of Philip II Augustus">Wall of Philip II Augustus</a></li>
-        </ul>
-    </div>
-    <div class="mw-category-group"><h3>*</h3>
-        <ul><li><a href="/wiki/City_gates_of_Paris" title="City gates of Paris">City gates of Paris</a></li>
-            <li><a href="/wiki/Haussmann%27s_renovation_of_Paris" title="Haussmann's renovation of Paris">Haussmann's renovation of Paris</a></li>
-            <li><a href="/wiki/Boulevards_of_the_Marshals" title="Boulevards of the Marshals">Boulevards of the Marshals</a></li>
-        </ul>
-    </div>
 
     <div class="mw-category-group"><h3>A</h3>
         <ul><li><a href="/wiki/Boulevard_Auguste-Blanqui" title="Boulevard Auguste-Blanqui">Boulevard Auguste-Blanqui</a></li>
@@ -147,14 +134,16 @@
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+    const boulevards = Array.from(document.querySelectorAll('div.mw-category a')).map(b=>b.innerText).filter(b=>b.match(/de/i));
+    console.log(boulevards);
 
 
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
     // const sorted3 = people.map( (item)=> item.match(/^(.+),\s(.+)$/)[1] );
-    const sorted3 = people.sort( (left,right)=>left.match(/^(.+),\s(.+)$/)[1]>right.match(/^(.+),\s(.+)$/)[1]?1:-1 );
+    // const sorted3 = people.sort( (left,right)=>left.match(/^(.+),\s(.+)$/)[1]>right.match(/^(.+),\s(.+)$/)[1]?1:-1 );
+    const sorted3 = people.sort( (left,right)=>{ return left>right ? 1:-1; });
     console.table(sorted3);
 
 
