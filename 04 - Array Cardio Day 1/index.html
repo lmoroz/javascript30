@@ -31,29 +31,59 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+    const filtered = inventors.filter( inv=>inv.year.toString().match(/^15/) );
+    console.table(filtered);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+    const onlynames = inventors.map( (inv)=>({first:inv.first,last:inv.last}) );
+    console.table(onlynames);
+
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    const sorted = inventors.sort( (invleft,invright)=>invright.year-invleft.year );
+    console.table(sorted);
+
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
+    const totallive = inventors.reduce( (sum, invcur, index, array)=>sum+(invcur.passed-invcur.year) , 0);
+    console.log(totallive);
+
 
     // 5. Sort the inventors by years lived
+    const sorted2 = inventors.sort( (invleft,invright)=>(invleft.passed - invleft.year) - (invright.passed - invright.year) );
+    console.table(sorted2);
+
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
 
+
+
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    // const sorted3 = people.map( (item)=> item.match(/^(.+),\s(.+)$/)[1] );
+    const sorted3 = people.sort( (left,right)=>left.match(/^(.+),\s(.+)$/)[1]>right.match(/^(.+),\s(.+)$/)[1]?1:-1 );
+    console.table(sorted3);
+
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const totalvechicle = data.reduce( (sumitem, cur, index, array)=> {
+        if (sumitem==0 || sumitem==undefined) {
+            sumitem = {};
+            sumitem[cur] = 1;
+        }
+        else if (cur in sumitem) sumitem[cur] +=1;
+        else sumitem[cur] = 1;
+        return sumitem;
+    } , 0);
+    console.table(totalvechicle);
 
-  </script>
+</script>
 </body>
 </html>
