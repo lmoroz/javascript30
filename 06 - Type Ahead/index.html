@@ -10,12 +10,70 @@
   <form class="search-form">
     <input type="text" class="search" placeholder="City or State">
     <ul class="suggestions">
-      <li>Filter for a city</li>
-      <li>or a state</li>
+
     </ul>
   </form>
   <script>
     const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+    const cities = [];
+    const result = fetch(endpoint)
+    .then(response => response.json())
+    .then(data => 
+      data.map(cityEl=>(
+        {city:cityEl.city,
+          state:cityEl.state,
+          pop:cityEl.population.toString().replace(/(\d)(\d{3})$/,'$1,$2').replace(/(\d)(\d{3},\d{3})$/,'$1,$2'),
+          rank:cityEl.rank
+        })
+      ) )
+    .then(data =>  cities.push(...data));
+
+
+
+    const emptylistitem1 = document.createElement('li');
+    emptylistitem1.textContent = 'Filter for a city';
+    emptylistitem1.dataset.rank = 0;
+    const emptylistitem2 = document.createElement('li');
+    emptylistitem2.textContent = 'or a state';
+    emptylistitem2.dataset.rank = 0;
+
+    const list = document.querySelector('ul.suggestions');
+    const termInput = document.querySelector('input.search');
+
+    function showData (e) {
+      const term = termInput.value;
+      const listitems = document.querySelectorAll('ul.suggestions li');
+
+      list.innerHTML = '';
+      if (!term) {
+        list.appendChild(emptylistitem1);
+        list.appendChild(emptylistitem2);
+        return;
+      }
+
+      var regexp = new RegExp("("+term.replace(/\./,'\\.')+")", "ig");
+      citiesFiltered = cities.filter(
+        cityItem => 
+        (cityItem.city.match(regexp) || 
+          cityItem.state.match(regexp))
+        );
+
+      newHTML = citiesFiltered.map((cityItem) => {
+        var listItemName = cityItem.city+', '+cityItem.state;
+        listItemName = listItemName.replace(regexp,'<span class="hl">$1</span>');
+        return `<li>
+        <span class="name">${listItemName}</span>
+        <span class="population">${cityItem.pop}</span></li>`;
+      }).join('');
+
+      list.innerHTML = newHTML;
+    }
+
+
+    showData();
+    termInput.addEventListener('change',showData);
+    termInput.addEventListener('keyup',showData);
 
   </script>
 </body>
