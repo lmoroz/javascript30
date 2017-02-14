@@ -18,28 +18,70 @@
     }
 
     // Regular
+    console.log('Hello');
 
     // Interpolated
+    console.log('Hello I am a %s','£');
+    const variable = 'qw€®™¥u';
+    console.log(`Hello I am a ${variable}`);
 
     // Styled
+    console.log('%c Hello I am a %s','font-size: 25px; background: red; text-shadow: 10px 10px 0 blue');
 
     // warning!
+    console.warn('OH NOOOOO!');
 
     // Error :|
+    console.error('_NO NO NO!_');
 
     // Info
+    console.info('Just to notice');
 
     // Testing
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'That is wrong!');
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
 
     // Grouping together
+    dogs.forEach(dog=> {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} id ${dog.age} years old`);
+      console.log(`${dog.name} id ${dog.age * 7} dog yeas old`);
+      console.groupEnd(`${dog.name}`);
+    });
 
+    
     // counting
 
+    console.count('I am');
+    console.count('I am');
+    console.count('Wes');
+    console.count('I am');
+    console.count('I am');
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Bos');
+    console.count('Bos');
+
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/lmoroz')
+    .then(data => data.json())
+    .then(data => {
+      console.timeEnd('fetching data');
+      console.log(data);
+    });
+
+    console.table(dogs);
 
   </script>
 </body>
