@@ -65,45 +65,82 @@
 
  -->
  <div class="inbox">
-  <div class="item">
+  <label class="item">
     <input type="checkbox">
     <p>This is an inbox layout.</p>
-  </div>
-  <div class="item">
+  </label>
+  <label class="item">
     <input type="checkbox">
     <p>Check one item</p>
-  </div>
-  <div class="item">
+  </label>
+  <label class="item">
     <input type="checkbox">
     <p>Hold down your Shift key</p>
-  </div>
-  <div class="item">
+  </label>
+  <label class="item">
     <input type="checkbox">
     <p>Check a lower item</p>
-  </div>
-  <div class="item">
+  </label>
+  <label class="item">
     <input type="checkbox">
     <p>Everything inbetween should also be set to checked</p>
-  </div>
-  <div class="item">
+  </label>
+  <label class="item">
     <input type="checkbox">
     <p>Try do it with out any libraries</p>
-  </div>
-  <div class="item">
+  </label>
+  <label class="item">
     <input type="checkbox">
     <p>Just regular JavaScript</p>
-  </div>
-  <div class="item">
+  </label>
+  <label class="item">
     <input type="checkbox">
     <p>Good Luck!</p>
-  </div>
-  <div class="item">
+  </label>
+  <label class="item">
     <input type="checkbox">
     <p>Don't forget to tweet your result!</p>
-  </div>
+  </label>
 </div>
 
 <script>
+  const inbox  = document.querySelector('div.inbox');
+  const checks = Array.from(document.querySelectorAll('label.item input'));
+
+  let shiftPressed = false;
+  let prevClickedPosition = false;
+
+  function clickInput(e) {
+    if(e.srcElement.tagName.toLowerCase() != 'input') return;
+    const curClicked = e.srcElement;
+    const curClickedPosition = checks.indexOf(curClicked);
+    let startCheck = false;
+
+    if (shiftPressed 
+      && prevClickedPosition!==false 
+      && prevClickedPosition!=curClickedPosition) {
+
+      const prevChecked = checks[prevClickedPosition].checked;
+
+    console.log('shiftPressed = ',shiftPressed,'; prevClickedPosition = ',prevClickedPosition,'; curClickedPosition = ',curClickedPosition);
+
+
+    for (
+      index = prevClickedPosition; 
+      (prevClickedPosition<curClickedPosition) ? 
+      index <= curClickedPosition : index >= curClickedPosition;
+      (prevClickedPosition<curClickedPosition) ? 
+      index++ : index--   
+      )
+      checks[index].checked = prevChecked;
+  }
+
+  if(!shiftPressed)
+    prevClickedPosition = curClickedPosition;
+}
+document.addEventListener('keydown', (e)=>{if (e.keyCode==16) shiftPressed = true;});
+document.addEventListener('keyup', (e)=>{if (e.keyCode==16) shiftPressed = false;});
+inbox.addEventListener('click', clickInput);
 </script>
 </body>
 </html>
