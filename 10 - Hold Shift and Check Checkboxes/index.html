@@ -24,6 +24,7 @@
       display:flex;
       align-items:center;
       border-bottom: 1px solid #F1F1F1;
+      background-color: inherit;
     }
 
     .item:last-child {
@@ -32,12 +33,18 @@
 
 
     input:checked + p {
-      background:#F9F9F9;
+      background:lightgreen;
       text-decoration: line-through;
+      color: #777;
+      font-weight: 100;
+      font-style: italic;
     }
 
     input[type="checkbox"] {
-      margin:20px;
+      flex-basis: 50px;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
     }
 
     p {
@@ -55,6 +62,7 @@
       text-align: center;
       font-size: 15px;
     }
+
 
 
   </style>
@@ -105,42 +113,33 @@
 
 <script>
   const inbox  = document.querySelector('div.inbox');
-  const checks = Array.from(document.querySelectorAll('label.item input'));
+  const checks = Array.from(document.querySelectorAll('div.inbox input'));
 
   let shiftPressed = false;
-  let prevClickedPosition = false;
+  let prevElI = false; //previous checked|unchecked element index
 
   function clickInput(e) {
     if(e.srcElement.tagName.toLowerCase() != 'input') return;
-    const curClicked = e.srcElement;
-    const curClickedPosition = checks.indexOf(curClicked);
-    let startCheck = false;
+    const curElI = checks.indexOf(e.srcElement);
 
-    if (shiftPressed 
-      && prevClickedPosition!==false 
-      && prevClickedPosition!=curClickedPosition) {
-
-      const prevChecked = checks[prevClickedPosition].checked;
-
-    console.log('shiftPressed = ',shiftPressed,'; prevClickedPosition = ',prevClickedPosition,'; curClickedPosition = ',curClickedPosition);
-
-
-    for (
-      index = prevClickedPosition; 
-      (prevClickedPosition<curClickedPosition) ? 
-      index <= curClickedPosition : index >= curClickedPosition;
-      (prevClickedPosition<curClickedPosition) ? 
-      index++ : index--   
-      )
-      checks[index].checked = prevChecked;
+    if (shiftPressed && prevElI!==false && prevElI!=curElI) {
+      const prevChecked = checks[prevElI].checked;
+      for (
+        let index = Math.min(prevElI,curElI); 
+        index <= Math.max(prevElI,curElI); 
+        index++ ) {
+        checks[index].checked = prevChecked;
+    }
   }
-
-  if(!shiftPressed)
-    prevClickedPosition = curClickedPosition;
+  if(!shiftPressed) prevElI = curElI;
 }
-document.addEventListener('keydown', (e)=>{if (e.keyCode==16) shiftPressed = true;});
-document.addEventListener('keyup', (e)=>{if (e.keyCode==16) shiftPressed = false;});
+
+document.addEventListener('keydown', 
+  (e)=>{if (e.keyCode==16) shiftPressed = true;});
+document.addEventListener('keyup', 
+  (e)=>{if (e.keyCode==16) shiftPressed = false;});
 inbox.addEventListener('click', clickInput);
+inbox.addEventListener('change', clickInput);
 </script>
 </body>
 </html>
