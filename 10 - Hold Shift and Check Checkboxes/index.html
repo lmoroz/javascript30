@@ -15,7 +15,6 @@
     .inbox {
       max-width:400px;
       margin:50px auto;
-      background:white;
       border-radius:5px;
       box-shadow:10px 10px 0 rgba(0,0,0,0.1);
     }
@@ -33,14 +32,16 @@
 
 
     input:checked + p {
-      background:lightgreen;
+      background: lightyellow;
       text-decoration: line-through;
+      opacity: 0.25;
       color: #777;
       font-weight: 100;
       font-style: italic;
     }
 
     input[type="checkbox"] {
+      background:white;
       flex-basis: 50px;
       cursor: pointer;
       width: 20px;
@@ -48,9 +49,10 @@
     }
 
     p {
+      background:white;
       margin:0;
       padding:20px;
-      transition:background 0.2s;
+      transition: all 0.5s;
       flex:1;
       font-family:'helvetica neue';
       font-size: 20px;
@@ -114,13 +116,12 @@
 <script>
   const inbox  = document.querySelector('div.inbox');
   const checks = Array.from(document.querySelectorAll('div.inbox input'));
-
-  let shiftPressed = false;
   let prevElI = false; //previous checked|unchecked element index
 
   function clickInput(e) {
     if(e.srcElement.tagName.toLowerCase() != 'input') return;
     const curElI = checks.indexOf(e.srcElement);
+    const shiftPressed = e.shiftKey;
 
     if (shiftPressed && prevElI!==false && prevElI!=curElI) {
       const prevChecked = checks[prevElI].checked;
@@ -134,10 +135,7 @@
   if(!shiftPressed) prevElI = curElI;
 }
 
-document.addEventListener('keydown', 
-  (e)=>{if (e.keyCode==16) shiftPressed = true;});
-document.addEventListener('keyup', 
-  (e)=>{if (e.keyCode==16) shiftPressed = false;});
+
 inbox.addEventListener('click', clickInput);
 inbox.addEventListener('change', clickInput);
 </script>
