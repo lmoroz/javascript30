@@ -21,7 +21,7 @@ Start date: Febuary 7th, 2017
 8.  [x] | [08 HTML5 Canvas](https://lmoroz.github.io/javascript30/08 - Fun with HTML5 Canvas/index.html)
 9.  [x] | [09 Dev Tools Domination](https://lmoroz.github.io/javascript30/09 - Dev Tools Domination/index.html)
 10. [x] | [10 Checkboxes](https://lmoroz.github.io/javascript30/10 - Hold Shift and Check Checkboxes/index.html)
-11. [ ] | [11 Custom Video Player]
+11. [x] | [11 Custom Video Player](https://lmoroz.github.io/javascript30/11 - Custom Video Player/)
 12. [ ] | [12 Key Sequence Detection]
 13. [ ] | [13 Slide in on Scroll]
 14. [ ] | [14 JS References vs Copying]
