@@ -26,18 +26,18 @@ Start date: Febuary 7th, 2017
 13. [x] | [13 Slide in on Scroll](https://lmoroz.github.io/javascript30/13 - Slide in on Scroll/)
 14. [x] | [14 JS References vs Copying](https://lmoroz.github.io/javascript30/14 - JavaScript References VS Copying/)
 15. [x] | [15 LocalStorage](https://lmoroz.github.io/javascript30/15 - LocalStorage/)
-16. [ ] | [16 Mouse Move Shadow](https://lmoroz.github.io/javascript30/16 - Mouse Move Shadow/)
-17. [ ] | [17 Sort Without Articles]
-18. [ ] | [18 Adding Up Times with Reduce]
-19. [ ] | [19 Webcam Fun]
-20. [ ] | [20 Speech Detection]
-21. [ ] | [21 Geolocation]
-22. [ ] | [22 Follow Along Link Highlighter]
-23. [ ] | [23 Speech Synthesis ]
-24. [ ] | [24 Sticky Nav]
-25. [ ] | [25 Event Capture, Propagation.. ]
-26. [ ] | [26 Stripe Follow Along Nav]
-27. [ ] | [27 Click and Drag]
-28. [ ] | [28 Video Speed Controller]
-29. [ ] | [29 Countdown Timer]
-30. [ ] | [30 Whack A Mole]
+16. [x] | [16 Mouse Move Shadow](https://lmoroz.github.io/javascript30/16 - Mouse Move Shadow/)
+17. [ ] | [17 Sort Without Articles](https://lmoroz.github.io/javascript30/17 - Sort Without Articles/)
+18. [ ] | [18 Adding Up Times with Reduce](https://lmoroz.github.io/javascript30/18 - Adding Up Times with Reduce/)
+19. [ ] | [19 Webcam Fun](https://lmoroz.github.io/javascript30/19 - Webcam Fun/)
+20. [ ] | [20 Speech Detection](https://lmoroz.github.io/javascript30/20 - Speech Detection/)
+21. [ ] | [21 Geolocation](https://lmoroz.github.io/javascript30/21 - Geolocation/)
+22. [ ] | [22 Follow Along Link Highlighter](https://lmoroz.github.io/javascript30/22 - Follow Along Link Highlighter/)
+23. [ ] | [23 Speech Synthesis ](https://lmoroz.github.io/javascript30/23 - Speech Synthesis/)
+24. [ ] | [24 Sticky Nav](https://lmoroz.github.io/javascript30/24 - Sticky Nav/)
+25. [ ] | [25 Event Capture, Propagation.. ](https://lmoroz.github.io/javascript30/25 - Event Capture, Propagation, Bubbling and Once/)
+26. [ ] | [26 Stripe Follow Along Nav](https://lmoroz.github.io/javascript30/26 - Stripe Follow Along Nav/)
+27. [ ] | [27 Click and Drag](https://lmoroz.github.io/javascript30/27 - Click and Drag/)
+28. [ ] | [28 Video Speed Controller](https://lmoroz.github.io/javascript30/28 - Video Speed Controller/)
+29. [ ] | [29 Countdown Timer](https://lmoroz.github.io/javascript30/29 - Countdown Timer/)
+30. [ ] | [30 Whack A Mole](https://lmoroz.github.io/javascript30/30 - Whack A Mole/)

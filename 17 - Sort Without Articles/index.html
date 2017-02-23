@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sort Without Articles</title>
-</head>
-<body>
 
-  <style>
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Without Articles</title>
+</head>
+
+<body>
+    <style>
     body {
-      font-family: sans-serif;
-      background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      min-height: 100vh;
+        font-family: sans-serif;
+        background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
     }
 
     #bands {
-      list-style: inside square;
-      font-size: 20px;
-      background: white;
-      width: 500px;
-      margin: auto;
-      padding: 0;
-      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+        list-style: inside square;
+        font-size: 20px;
+        background: white;
+        width: 500px;
+        margin: auto;
+        padding: 0;
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
     }
+
     #bands li {
-      border-bottom: 1px solid #efefef;
-      padding: 20px;
+        border-bottom: 1px solid #efefef;
+        padding: 20px;
     }
+
     #bands li:last-child {
-      border-bottom: 0;
+        border-bottom: 0;
     }
 
     a {
-      color: #ffc600;
-      text-decoration: none;
+        color: #ffc600;
+        text-decoration: none;
     }
 
-  </style>
+    .first {
+        color: red;
+        text-decoration: underline;
+    }
+    </style>
+    <ul id="bands"></ul>
+    <script>
+    const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
 
-  <ul id="bands"></ul>
+    const html = bands.sort((a, b) => (a.replace(/^(a |an |the )/i, '') > b.replace(/^(a |an |the )/i, '')) ? 1 : -1).map(title => `<li>
+        ${title.replace(/^(a |an |the )*(.)/i, '$1<span class="first">$2</span>')}
+        </li>`).join('');
 
-<script>
-const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+    document.querySelector('ul#bands').innerHTML = html;
 
-
-</script>
-
+    </script>
 </body>
+
 </html>
