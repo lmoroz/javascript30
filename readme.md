@@ -26,7 +26,7 @@ Start date: Febuary 7th, 2017
 13. [x] | [13 Slide in on Scroll](https://lmoroz.github.io/javascript30/13 - Slide in on Scroll/)
 14. [x] | [14 JS References vs Copying](https://lmoroz.github.io/javascript30/14 - JavaScript References VS Copying/)
 15. [x] | [15 LocalStorage](https://lmoroz.github.io/javascript30/15 - LocalStorage/)
-16. [ ] | [16 Mouse Move Shadow]
+16. [ ] | [16 Mouse Move Shadow](https://lmoroz.github.io/javascript30/16 - Mouse Move Shadow/)
 17. [ ] | [17 Sort Without Articles]
 18. [ ] | [18 Adding Up Times with Reduce]
 19. [ ] | [19 Webcam Fun]
