@@ -22,10 +22,10 @@ Start date: Febuary 7th, 2017
 9.  [x] | [09 Dev Tools Domination](https://lmoroz.github.io/javascript30/09 - Dev Tools Domination/index.html)
 10. [x] | [10 Checkboxes](https://lmoroz.github.io/javascript30/10 - Hold Shift and Check Checkboxes/index.html)
 11. [x] | [11 Custom Video Player](https://lmoroz.github.io/javascript30/11 - Custom Video Player/)
-12. [ ] | [12 Key Sequence Detection](https://lmoroz.github.io/javascript30/12 - Key Sequence Detection/)
-13. [ ] | [13 Slide in on Scroll](https://lmoroz.github.io/javascript30/13 - Slide in on Scroll/)
-14. [ ] | [14 JS References vs Copying]
-15. [ ] | [15 LocalStorage]
+12. [x] | [12 Key Sequence Detection](https://lmoroz.github.io/javascript30/12 - Key Sequence Detection/)
+13. [x] | [13 Slide in on Scroll](https://lmoroz.github.io/javascript30/13 - Slide in on Scroll/)
+14. [x] | [14 JS References vs Copying](https://lmoroz.github.io/javascript30/14 - JavaScript References VS Copying/)
+15. [x] | [15 LocalStorage](https://lmoroz.github.io/javascript30/15 - LocalStorage/)
 16. [ ] | [16 Mouse Move Shadow]
 17. [ ] | [17 Sort Without Articles]
 18. [ ] | [18 Adding Up Times with Reduce]
