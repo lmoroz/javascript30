@@ -114,7 +114,7 @@ body {
 input[type=range] {
     -webkit-appearance: none;
     background: transparent;
-width: 100%;
+    width: 100%;
     margin: 0 5px;
 }
 
