@@ -1,4 +1,6 @@
 .DS_Store
+.tern-project
+.eslintrc
 node_modules/
 *.log
 haters/
