@@ -29,7 +29,7 @@ Start date: Febuary 7th, 2017
 16. [x] | [16 Mouse Move Shadow](https://lmoroz.github.io/javascript30/16 - Mouse Move Shadow/)
 17. [x] | [17 Sort Without Articles](https://lmoroz.github.io/javascript30/17 - Sort Without Articles/)
 18. [x] | [18 Adding Up Times with Reduce](https://lmoroz.github.io/javascript30/18 - Adding Up Times with Reduce/)
-19. [ ] | [19 Webcam Fun](https://lmoroz.github.io/javascript30/19 - Webcam Fun/)
+19. [x] | [19 Webcam Fun](https://lmoroz.github.io/javascript30/19 - Webcam Fun/)
 20. [ ] | [20 Speech Detection](https://lmoroz.github.io/javascript30/20 - Speech Detection/)
 21. [ ] | [21 Geolocation](https://lmoroz.github.io/javascript30/21 - Geolocation/)
 22. [ ] | [22 Follow Along Link Highlighter](https://lmoroz.github.io/javascript30/22 - Follow Along Link Highlighter/)
@@ -41,4 +41,3 @@ Start date: Febuary 7th, 2017
 28. [ ] | [28 Video Speed Controller](https://lmoroz.github.io/javascript30/28 - Video Speed Controller/)
 29. [ ] | [29 Countdown Timer](https://lmoroz.github.io/javascript30/29 - Countdown Timer/)
 30. [ ] | [30 Whack A Mole](https://lmoroz.github.io/javascript30/30 - Whack A Mole/)
-e675091f6f44cb87976c90421df3cc3f2a5ce655
