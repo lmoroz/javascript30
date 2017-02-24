@@ -1,24 +1,26 @@
 const container = document.querySelector('.items');
 let mousedown = false;
+let startX;
+let scrollLeft;
 
 function scrollMe(event) {
-    // event.stopPropagation(); // stop bubbling
-    console.log({
-        element: event.target.classList.value,
-        clientX: event.clientX,
-        layerX: event.layerX,
-        offsetX: event.offsetX,
-        movementX: event.movementX,
-        x: event.x
-    });
-    container.scrollLeft -= event.movementX;
+    event.preventDefault();
+    const x = event.pageX - container.offsetLeft;
+    const walk = (x - startX) * 3;
+    container.scrollLeft = scrollLeft - walk;
 }
 
-container.addEventListener('mousedown', () => {
+container.addEventListener('mousedown', (e) => {
     mousedown = true;
     container.classList.add('active');
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
 });
 container.addEventListener('mouseup', () => {
+    mousedown = false;
+    container.classList.remove('active');
+});
+container.addEventListener('mouseleave', () => {
     mousedown = false;
     container.classList.remove('active');
 });
