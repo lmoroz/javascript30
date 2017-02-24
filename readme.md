@@ -30,7 +30,7 @@ Start date: Febuary 7th, 2017
 17. [x] | [17 Sort Without Articles](https://lmoroz.github.io/javascript30/17 - Sort Without Articles/)
 18. [x] | [18 Adding Up Times with Reduce](https://lmoroz.github.io/javascript30/18 - Adding Up Times with Reduce/)
 19. [x] | [19 Webcam Fun](https://lmoroz.github.io/javascript30/19 - Webcam Fun/)
-20. [ ] | [20 Speech Detection](https://lmoroz.github.io/javascript30/20 - Speech Detection/)
+20. [x] | [20 Speech Detection](https://lmoroz.github.io/javascript30/20 - Speech Detection/)
 21. [ ] | [21 Geolocation](https://lmoroz.github.io/javascript30/21 - Geolocation/)
 22. [ ] | [22 Follow Along Link Highlighter](https://lmoroz.github.io/javascript30/22 - Follow Along Link Highlighter/)
 23. [ ] | [23 Speech Synthesis ](https://lmoroz.github.io/javascript30/23 - Speech Synthesis/)
