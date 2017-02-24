@@ -41,3 +41,4 @@ Start date: Febuary 7th, 2017
 28. [ ] | [28 Video Speed Controller](https://lmoroz.github.io/javascript30/28 - Video Speed Controller/)
 29. [ ] | [29 Countdown Timer](https://lmoroz.github.io/javascript30/29 - Countdown Timer/)
 30. [ ] | [30 Whack A Mole](https://lmoroz.github.io/javascript30/30 - Whack A Mole/)
+e675091f6f44cb87976c90421df3cc3f2a5ce655
