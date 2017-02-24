@@ -1,6 +1,7 @@
 .DS_Store
 .tern-project
 .eslintrc
+.jsbeautifyrc
 node_modules/
 *.log
 haters/
