@@ -36,7 +36,7 @@ Start date: Febuary 7th, 2017
 23. [x] | [23 Speech Synthesis ](https://lmoroz.github.io/javascript30/23 - Speech Synthesis/)
 24. [x] | [24 Sticky Nav](https://lmoroz.github.io/javascript30/24 - Sticky Nav/)
 25. [x] | [25 Event Capture, Propagation.. ](https://lmoroz.github.io/javascript30/25 - Event Capture, Propagation, Bubbling and Once/)
-26. [ ] | [26 Stripe Follow Along Nav](https://lmoroz.github.io/javascript30/26 - Stripe Follow Along Nav/)
+26. [x] | [26 Stripe Follow Along Nav](https://lmoroz.github.io/javascript30/26 - Stripe Follow Along Nav/)
 27. [ ] | [27 Click and Drag](https://lmoroz.github.io/javascript30/27 - Click and Drag/)
 28. [ ] | [28 Video Speed Controller](https://lmoroz.github.io/javascript30/28 - Video Speed Controller/)
 29. [ ] | [29 Countdown Timer](https://lmoroz.github.io/javascript30/29 - Countdown Timer/)
