@@ -33,7 +33,7 @@ Start date: Febuary 7th, 2017
 20. [x] | [20 Speech Detection](https://lmoroz.github.io/javascript30/20 - Speech Detection/)
 21. [x] | [21 Geolocation](https://lmoroz.github.io/javascript30/21 - Geolocation/)
 22. [x] | [22 Follow Along Link Highlighter](https://lmoroz.github.io/javascript30/22 - Follow Along Link Highlighter/)
-23. [ ] | [23 Speech Synthesis ](https://lmoroz.github.io/javascript30/23 - Speech Synthesis/)
+23. [x] | [23 Speech Synthesis ](https://lmoroz.github.io/javascript30/23 - Speech Synthesis/)
 24. [ ] | [24 Sticky Nav](https://lmoroz.github.io/javascript30/24 - Sticky Nav/)
 25. [ ] | [25 Event Capture, Propagation.. ](https://lmoroz.github.io/javascript30/25 - Event Capture, Propagation, Bubbling and Once/)
 26. [ ] | [26 Stripe Follow Along Nav](https://lmoroz.github.io/javascript30/26 - Stripe Follow Along Nav/)
