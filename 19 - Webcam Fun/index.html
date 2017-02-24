@@ -10,8 +10,21 @@
 <body>
     <div class="photobooth">
         <div class="controls">
-            <button onClick="takePhoto()">Take Photo</button>
+            <button class="take_photo" onClick="takePhoto()">Take Photo</button>
+            <div class="actions">
+                <label for="noeffect">
+                    <input id="noeffect" type="radio" name="do_effect" checked=checked /> None</label>
+                <label for="makered">
+                    <input id="makered" type="radio" name="do_effect" /> Make red</label>
+                <label for="splitcolors">
+                    <input id="splitcolors" type="radio" name="do_effect" /> Split colors</label>
+                <label for="doghost">
+                    <input id="doghost" type="checkbox"> Do ghost</label>
+            </div>
             <div class="rgb">
+                <label for="greenscreen">
+                    <input id="greenscreen" type="radio" name="do_effect" /> Enable Greenscreen</label>
+                <br />
                 <label for="rmin">Red Min:</label>
                 <input type="range" min=0 max=255 name="rmin">
                 <label for="rmax">Red Max:</label>
