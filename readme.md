@@ -40,4 +40,4 @@ Start date: Febuary 7th, 2017
 27. [x] | [27 Click and Drag](https://lmoroz.github.io/javascript30/27 - Click and Drag/)
 28. [x] | [28 Video Speed Controller](https://lmoroz.github.io/javascript30/28 - Video Speed Controller/)
 29. [x] | [29 Countdown Timer](https://lmoroz.github.io/javascript30/29 - Countdown Timer/)
-30. [ ] | [30 Whack A Mole](https://lmoroz.github.io/javascript30/30 - Whack A Mole/)
+30. [x] | [30 Whack A Mole](https://lmoroz.github.io/javascript30/30 - Whack A Mole/)
